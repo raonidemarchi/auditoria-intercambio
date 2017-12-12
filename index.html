@@ -70,13 +70,13 @@
 						</a>
 					</li>
 					<li role="presentation" class="h4">
-						<a href="#tarefasMinhas" aria-controls="profile" role="tab" data-toggle="tab">
+						<a href="#tarefasMinha" aria-controls="profile" role="tab" data-toggle="tab">
 							<img src="resources/004-team.png" alt="Grupo">
 							<span> Tarefas a Concluir</span>
 						</a>
 					</li>
 					<li role="presentation" class="h4">
-						<a href="#analytics" aria-controls="profile" role="tab" data-toggle="tab">
+						<a href="#analytic" aria-controls="profile" role="tab" data-toggle="tab">
 							<img src="resources/001-profits.png" alt="Grupo">
 							<span> Analytics</span>
 						</a>
@@ -138,8 +138,7 @@
 					</div>
 					<!-- /.tab-pane -->
 					<div class="tab-pane fade active in" id="analytics">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-						in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		
 					</div>
 					<!-- /.tab-pane -->
 				</div>
@@ -152,8 +151,7 @@
 		<div class="row">
 		<div class="col-md-6 form-group">
 		<div class="checkbox-inline">
-		<label><input type="radio" name="aprovar" value="aprovar">Aprovar</label>
-		<label><input type="radio" name="aprovar" value="devolver">Devolver</label>
+		
 		</div>
 
 		
@@ -234,10 +232,14 @@
 			$('.dt-buttons a').text('Colunas visiveis');
 
 			var grupos = [
-				'teste1',
-				'teste2',
-				'teste3',
-				'teste4'
+				'Mãe de Deus',
+				'Batista'
+			];
+			
+			var prestadores = [
+				'CARLOS EDUARDO GUBERT',
+				'NILSON CESARIO PEREIRA',
+				'ELOISA AMANDA GEISLER'
 			];
 
 			// bloco script add infos na tabela
@@ -246,7 +248,7 @@
 					Math.floor(Math.random() * 999) + 1, // Solicitação
 					'Auditoria Medica', // Localização
 					Math.floor(Math.random() * 50) + 250, // Unidade
-					Math.floor(Math.random() * 990200) + 250, // Prestador
+					prestadores[Math.floor(Math.random() * 3)],
 					'200', // Transação
 					Math.floor(Math.random() * 321682) + 250, // Numero
 					'2017', // Ano Fatura
@@ -255,7 +257,7 @@
 					Math.floor(Math.random() * 11885772) + 9999, // Doc
 					'<span class="text-danger">Faltam ' + (Math.floor(Math.random() * 30) + 1) + ' dias </span><br/>' + (Math.floor(Math.random() * 30) + 1) + "/" + (Math.floor(Math.random() * 12) + 1) + '/2017', // Vencimento
 					'R$ ' + (Math.floor(Math.random() * 999) + 1) + ',00',
-					grupos[Math.floor(Math.random() * 4)],
+					grupos[Math.floor(Math.random() * 2)],
 					'2017/06', // Periodo
 					'Marilda' // Paciente
 				]).draw();
